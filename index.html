@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muhamad Fazri Al Husaeni | Tukang Jahit Tas & Pakaian</title>
+
+    <meta
+        name="description"
+        content="Muhamad Fazri Al Husaeni - tukang jahit tas dan pakaian profesional."
+    >
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        teal: "#0d9488",
+                        dark: "#0f172a"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ================================
+           SCROLLBAR
+        ================================= */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(
+                #151617,
+                #0d9488
+            );
+            border-radius: 20px;
+        }
+
+        /* ================================
+           GRADIENT TEXT
+        ================================= */
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #2563eb,
+                #0d9488
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* ================================
+           HERO BACKGROUND
+        ================================= */
+
+        .hero-bg {
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(37, 99, 235, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(13, 148, 136, 0.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    180deg,
+                    #f8fafc,
+                    #ffffff
+                );
+        }
+
+        .grid-pattern {
+            background-image:
+                linear-gradient(
+                    rgba(15, 23, 42, 0.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(15, 23, 42, 0.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 45px 45px;
+        }
+
+        /* ================================
+           GLASS
+        ================================= */
+
+        .glass {
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.7);
+        }
+
+        /* ================================
+           FLOATING
+        ================================= */
+
+        .floating {
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+        }
+
+        /* ================================
+           FADE UP
+        ================================= */
+
+        .fade-up {
+            animation: fadeUp 0.9s ease forwards;
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ================================
+           REVEAL
+        ================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================================
+           PORTFOLIO
+        ================================= */
+
+        .portfolio-card {
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow:
+                0 25px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .portfolio-image {
+            transition: transform 0.7s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image {
+            transform: scale(1.08);
+        }
+
+        /* ================================
+           SECTION LINE
+        ================================= */
+
+        .section-line {
+            width: 55px;
+            height: 4px;
+            border-radius: 99px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #0d9488
+                );
+        }
+
+        /* ================================
+           BUTTON
+        ================================= */
+
+        .btn-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #0d9488
+                );
+
+            box-shadow:
+                0 12px 30px
+                rgba(37, 99, 235, 0.25);
+
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 18px 35px
+                rgba(37, 99, 235, 0.35);
+        }
+
+        /* ================================
+           PROFILE RING
+        ================================= */
+
+        .profile-ring {
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #0d9488,
+                    #7c3aed
+                );
+        }
+
+        /* ================================
+           TIMELINE
+        ================================= */
+
+        .timeline-line {
+            background:
+                linear-gradient(
+                    #2563eb,
+                    #0d9488
+                );
+        }
+
+        /* ================================
+           MODAL
+        ================================= */
+
+        .modal-image {
+            animation:
+                modalZoom 0.35s ease;
+        }
+
+        @keyframes modalZoom {
+
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+        /* ================================
+           MOBILE MENU
+        ================================= */
+
+        #mobileMenu {
+            transition:
+                max-height 0.4s ease,
+                opacity 0.3s ease;
+        }
+
+        /* ================================
+           NAV ACTIVE
+        ================================= */
+
+        .nav-link.active {
+            color: #2563eb;
+        }
+
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8"
+    >
+
+        <div
+            class="flex items-center justify-between h-20"
+        >
+
+            <!-- LOGO -->
+
+            <a
+                href="#home"
+                class="flex items-center gap-2"
+            >
+
+                <div
+                    class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg"
+                    style="
+                        background:
+                        linear-gradient(
+                            135deg,
+                            #2563eb,
+                            #0d9488
+                        );
+                    "
+                >
+                    MF
+                </div>
+
+                <div>
+
+                    <div
+                        class="font-extrabold text-slate-900 leading-none"
+                    >
+                        muhamad<span class="text-blue-600">
+                            fazri
+                        </span>
+                    </div>
+
+                    <div
+                        class="text-[10px] text-slate-500 mt-1"
+                    >
+                        TUKANG JAHIT
+                    </div>
+
+                </div>
+
+            </a>
+
+            <!-- DESKTOP NAV -->
+
+            <nav
+                class="hidden md:flex items-center gap-7"
+            >
+
+                <a
+                    href="#home"
+                    class="nav-link text-sm font-semibold hover:text-blue-600 transition active"
+                >
+                    Beranda
+                </a>
+
+                <a
+                    href="#about"
+                    class="nav-link text-sm font-semibold hover:text-blue-600 transition"
+                >
+                    Tentang
+                </a>
+
+                <a
+                    href="#portfolio"
+                    class="nav-link text-sm font-semibold hover:text-blue-600 transition"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    href="#education"
+                    class="nav-link text-sm font-semibold hover:text-blue-600 transition"
+                >
+                    Pendidikan
+                </a>
+
+                <a
+                    href="#experience"
+                    class="nav-link text-sm font-semibold hover:text-blue-600 transition"
+                >
+                    Pengalaman
+                </a>
+
+                <a
+                    href="#contact"
+                    class="px-5 py-2.5 rounded-full text-white font-semibold text-sm btn-primary"
+                >
+                    Hubungi Saya
+                </a>
+
+            </nav>
+
+            <!-- MOBILE BUTTON -->
+
+            <button
+                id="menuButton"
+                class="md:hidden w-11 h-11 rounded-xl bg-white shadow-sm border border-slate-200 flex items-center justify-center text-xl"
+                aria-label="Buka menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+
+        <nav
+            id="mobileMenu"
+            class="hidden md:hidden pb-5"
+        >
+
+            <div
+                class="bg-white rounded-2xl shadow-xl border border-slate-100 p-5 flex flex-col gap-4"
+            >
+
+                <a href="#home" class="mobile-link font-semibold">
+                    Beranda
+                </a>
+
+                <a href="#about" class="mobile-link font-semibold">
+                    Tentang Saya
+                </a>
+
+                <a href="#portfolio" class="mobile-link font-semibold">
+                    Portfolio
+                </a>
+
+                <a href="#education" class="mobile-link font-semibold">
+                    Pendidikan
+                </a>
+
+                <a href="#experience" class="mobile-link font-semibold">
+                    Pengalaman
+                </a>
+
+                <a
+                    href="#contact"
+                    class="mobile-link text-blue-600 font-bold"
+                >
+                    Hubungi Saya →
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    id="home"
+    class="min-h-screen pt-28 pb-20 flex items-center hero-bg grid-pattern relative overflow-hidden"
+>
+
+    <!-- Decorative circles -->
+
+    <div
+        class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-blue-400/10 blur-3xl"
+    ></div>
+
+    <div
+        class="absolute bottom-0 -left-32 w-96 h-96 rounded-full bg-teal-400/10 blur-3xl"
+    ></div>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8 w-full relative z-10"
+    >
+
+        <div
+            class="grid lg:grid-cols-2 gap-16 items-center"
+        >
+
+            <!-- TEXT -->
+
+            <div class="fade-up">
+
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-6"
+                >
+
+                    <span
+                        class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+                    ></span>
+
+                    <span
+                        class="text-sm font-semibold text-slate-600"
+                    >
+                        Siap menerima pesanan jahitan
+                    </span>
+
+                </div>
+
+                <p
+                    class="text-blue-600 font-bold mb-4"
+                >
+                    Halo barudak 👋, saya
+                </p>
+
+                <h1
+                    class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] text-slate-900"
+                >
+                    Muhamad
+                    <span class="gradient-text">
+                        Fazri
+                    </span>
+                    Al Husaeni
+                </h1>
+
+                <div
+                    class="mt-6 flex items-center gap-3"
+                >
+
+                    <div
+                        class="w-10 h-[3px] bg-blue-600 rounded-full"
+                    ></div>
+
+                    <h2
+                        class="text-lg sm:text-xl font-bold text-slate-600"
+                    >
+                        Tukang Jahit Tas & Pakaian
+                    </h2>
+
+                </div>
+
+                <p
+                    class="mt-7 text-slate-600 leading-8 max-w-xl text-base sm:text-lg"
+                >
+                    Saya memiliki keahlian dalam membuat,
+                    menjahit, memperbaiki, dan merapikan
+                    tas serta pakaian menggunakan berbagai
+                    jenis bahan dengan mengutamakan
+                    kerapian dan kekuatan jahitan.
+                </p>
+
+                <!-- BUTTON -->
+
+                <div
+                    class="mt-9 flex flex-wrap gap-4"
+                >
+
+                    <a
+                        href="#contact"
+                        class="btn-primary px-7 py-3.5 text-white rounded-xl font-bold"
+                    >
+                        Hubungi Saya →
+                    </a>
+
+                    <a
+                        href="#portfolio"
+                        class="px-7 py-3.5 bg-white border border-slate-200 rounded-xl font-bold hover:border-blue-500 hover:text-blue-600 transition shadow-sm"
+                    >
+                        Lihat Portfolio
+                    </a>
+
+                </div>
+
+                <!-- SKILLS -->
+
+                <div
+                    class="mt-10 flex flex-wrap gap-3"
+                >
+
+                    <span class="skill-pill">
+                        🎒 Tas
+                    </span>
+
+                    <span class="skill-pill">
+                        👕 Pakaian
+                    </span>
+
+                    <span class="skill-pill">
+                        🧵 Menjahit
+                    </span>
+
+                    <span class="skill-pill">
+                        ✂️ Reparasi
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- PHOTO -->
+
+            <div
+                class="flex justify-center lg:justify-end"
+            >
+
+                <div class="relative floating">
+
+                    <!-- Glow -->
+
+                    <div
+                        class="absolute inset-0 rounded-[2rem] bg-blue-500/20 blur-3xl scale-110"
+                    ></div>
+
+                    <!-- Decorative shape -->
+
+                    <div
+                        class="absolute -top-5 -right-5 w-full h-full rounded-[2rem] profile-ring rotate-6 opacity-90"
+                    ></div>
+
+                    <!-- Photo -->
+
+                    <div
+                        class="relative w-72 h-80 sm:w-80 sm:h-96 lg:w-[390px] lg:h-[470px] rounded-[2rem] overflow-hidden bg-slate-900 shadow-2xl border-8 border-white"
+                    >
+
+                        <img
+                            src="image/uh.png"
+                            alt="Foto Muhamad Fazri Al Husaeni"
+                            class="w-full h-full object-cover"
+                            onerror="
+                                this.style.display='none';
+                                this.nextElementSibling.style.display='flex';
+                            "
+                        >
+
+                        <div
+                            class="hidden w-full h-full items-center justify-center text-white text-center p-6"
+                        >
+
+                            <div>
+
+                                <div class="text-7xl mb-5">
+                                    👨‍🔧
+                                </div>
+
+                                <h3
+                                    class="text-2xl font-bold"
+                                >
+                                    Muhamad Fazri
+                                </h3>
+
+                                <p
+                                    class="text-slate-400 mt-2"
+                                >
+                                    Tukang Jahit Tas & Pakaian
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- EXPERIENCE BADGE -->
+
+                    <div
+                        class="absolute -bottom-7 -left-7 glass rounded-2xl shadow-xl p-4 flex items-center gap-3"
+                    >
+
+                        <div
+                            class="w-11 h-11 rounded-xl bg-blue-100 flex items-center justify-center text-xl"
+                        >
+                            🧵
+                        </div>
+
+                        <div>
+
+                            <p
+                                class="text-xs text-slate-500"
+                            >
+                                Keahlian
+                            </p>
+
+                            <p
+                                class="font-bold text-slate-900"
+                            >
+                               Membuat Tas & Pakaian
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- QUALITY BADGE -->
+
+                    <div
+                        class="absolute top-8 -left-8 bg-white rounded-2xl shadow-xl p-3 flex items-center gap-2"
+                    >
+
+                        <span class="text-xl">
+                            ⭐
+                        </span>
+
+                        <span
+                            class="text-xs font-bold"
+                        >
+                            Jahitan Rapi
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    id="about"
+    class="py-24 bg-white"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8"
+    >
+
+        <div class="reveal">
+
+            <div class="section-line mb-5"></div>
+
+            <p
+                class="text-blue-600 font-bold mb-3"
+            >
+                Tentang Saya
+            </p>
+
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 max-w-3xl"
+            >
+                Mengubah kain menjadi karya
+                yang <span class="gradient-text">rapi & kuat.</span>
+            </h2>
+
+        </div>
+
+        <div
+            class="grid lg:grid-cols-2 gap-14 mt-14"
+        >
+
+            <div class="reveal">
+
+                <p
+                    class="text-slate-600 leading-8 mb-5"
+                >
+                    Saya adalah seorang penjahit tas dan
+                    pakaian di
+                    <strong class="text-slate-900">
+                        PT Alim Rugi
+                    </strong>
+                    dengan pengalaman dalam membuat
+                    berbagai jenis tas dan pakaian.
+                </p>
+
+                <p
+                    class="text-slate-600 leading-8 mb-5"
+                >
+                    Saya merupakan alumni penjahit ekspres
+                    dan belajar keterampilan menjahit dari
+                    penjahit tas milik kakek dan ayah saya.
+                    Pengalaman tersebut menjadi dasar saya
+                    untuk terus menghasilkan jahitan yang
+                    rapi dan kuat.
+                </p>
+
+                <p
+                    class="text-slate-600 leading-8"
+                >
+                    Saya terbiasa membuat tas sekolah,
+                    tas kantor, tas piknik, tas alat musik,
+                    tas mancing, serta berbagai pakaian
+                    untuk kebutuhan sehari-hari maupun
+                    acara tertentu.
+                </p>
+
+            </div>
+
+            <div
+                class="grid sm:grid-cols-2 gap-5 reveal"
+            >
+
+                <!-- CARD -->
+
+                <div
+                    class="p-7 rounded-3xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 hover:-translate-y-2 transition duration-300"
+                >
+
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-blue-600/20"
+                    >
+                        🎒
+                    </div>
+
+                    <h3
+                        class="font-black text-xl mt-5"
+                    >
+                        Tas
+                    </h3>
+
+                    <p
+                        class="text-sm text-slate-600 leading-6 mt-3"
+                    >
+                        Tas sekolah, kantor, piknik,
+                        bermain, alat musik, dan mancing.
+                    </p>
+
+                </div>
+
+                <div
+                    class="p-7 rounded-3xl bg-gradient-to-br from-teal-50 to-white border border-teal-100 hover:-translate-y-2 transition duration-300"
+                >
+
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-teal-600 text-white flex items-center justify-center text-2xl shadow-lg shadow-teal-600/20"
+                    >
+                        👕
+                    </div>
+
+                    <h3
+                        class="font-black text-xl mt-5"
+                    >
+                        Pakaian
+                    </h3>
+
+                    <p
+                        class="text-sm text-slate-600 leading-6 mt-3"
+                    >
+                        Pakaian bermain, kondangan,
+                        resmi, dan pernikahan.
+                    </p>
+
+                </div>
+
+                <div
+                    class="p-7 rounded-3xl bg-gradient-to-br from-violet-50 to-white border border-violet-100 hover:-translate-y-2 transition duration-300"
+                >
+
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-violet-600 text-white flex items-center justify-center text-2xl"
+                    >
+                        🧵
+                    </div>
+
+                    <h3
+                        class="font-black text-xl mt-5"
+                    >
+                        Jahitan
+                    </h3>
+
+                    <p
+                        class="text-sm text-slate-600 leading-6 mt-3"
+                    >
+                        Mengutamakan jahitan rapi,
+                        kuat, dan sesuai kebutuhan.
+                    </p>
+
+                </div>
+
+                <div
+                    class="p-7 rounded-3xl bg-gradient-to-br from-orange-50 to-white border border-orange-100 hover:-translate-y-2 transition duration-300"
+                >
+
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-2xl"
+                    >
+                        ✂️
+                    </div>
+
+                    <h3
+                        class="font-black text-xl mt-5"
+                    >
+                        Reparasi
+                    </h3>
+
+                    <p
+                        class="text-sm text-slate-600 leading-6 mt-3"
+                    >
+                        Memperbaiki dan merapikan
+                        tas maupun pakaian.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     PORTFOLIO
+========================================================= -->
+
+<section
+    id="portfolio"
+    class="py-24 bg-slate-50"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8"
+    >
+
+        <div
+            class="text-center max-w-3xl mx-auto reveal"
+        >
+
+            <div class="section-line mx-auto mb-5"></div>
+
+            <p
+                class="text-blue-600 font-bold mb-3"
+            >
+                Portfolio
+            </p>
+
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-black"
+            >
+                Beberapa Karya Saya
+            </h2>
+
+            <p
+                class="mt-5 text-slate-600 leading-7"
+            >
+                Beberapa hasil tas dan pakaian yang
+                pernah saya buat. Klik gambar untuk
+                melihat ukuran lebih besar.
+            </p>
+
+        </div>
+
+        <div
+            id="projectContainer"
+            class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-14"
+        >
+
+            <!-- 1 -->
+
+            <div
+                class="portfolio-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm reveal"
+            >
+
+                <div
+                    class="h-72 overflow-hidden bg-slate-200 relative"
+                >
+
+                    <img
+                        src="image/ps.jpg"
+                        alt="Tas sekolah buatan Muhamad Fazri"
+                        class="portfolio-image w-full h-full object-cover cursor-zoom-in"
+                    >
+
+                    <div
+                        class="absolute top-4 left-4 px-3 py-1.5 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-blue-600"
+                    >
+                        TAS
+                    </div>
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3
+                        class="text-xl font-black text-slate-900"
+                    >
+                        Tas Sekolah
+                    </h3>
+
+                    <p
+                        class="mt-3 text-slate-600 text-sm leading-6"
+                    >
+                        Tas sekolah dengan jahitan rapi,
+                        kuat, dan nyaman digunakan.
+                    </p>
+
+                    <button
+                        onclick="openImage(this)"
+                        data-image="image/ps.jpg"
+                        data-caption="Tas Sekolah"
+                        class="mt-5 text-blue-600 font-bold text-sm hover:text-blue-800"
+                    >
+                        Lihat gambar →
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 2 -->
+
+            <div
+                class="portfolio-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm reveal"
+            >
+
+                <div
+                    class="h-72 overflow-hidden bg-slate-200 relative"
+                >
+
+                    <img
+                        src="image/dd.jpg"
+                        alt="Tas kantor buatan Muhamad Fazri"
+                        class="portfolio-image w-full h-full object-cover cursor-zoom-in"
+                    >
+
+                    <div
+                        class="absolute top-4 left-4 px-3 py-1.5 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-blue-600"
+                    >
+                        TAS
+                    </div>
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3
+                        class="text-xl font-black"
+                    >
+                        Tas Kantor
+                    </h3>
+
+                    <p
+                        class="mt-3 text-slate-600 text-sm leading-6"
+                    >
+                        Tas untuk bekerja dengan desain
+                        sederhana dan bahan yang kuat.
+                    </p>
+
+                    <button
+                        onclick="openImage(this)"
+                        data-image="image/dd.jpg"
+                        data-caption="Tas Kantor"
+                        class="mt-5 text-blue-600 font-bold text-sm"
+                    >
+                        Lihat gambar →
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 3 -->
+
+            <div
+                class="portfolio-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm reveal"
+            >
+
+                <div
+                    class="h-72 overflow-hidden bg-slate-200 relative"
+                >
+
+                    <img
+                        src="image/gp.jpg"
+                        alt="Tas mancing buatan Muhamad Fazri"
+                        class="portfolio-image w-full h-full object-cover"
+                    >
+
+                    <div
+                        class="absolute top-4 left-4 px-3 py-1.5 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-blue-600"
+                    >
+                        TAS
+                    </div>
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3
+                        class="text-xl font-black"
+                    >
+                        Tas Mancing
+                    </h3>
+
+                    <p
+                        class="mt-3 text-slate-600 text-sm leading-6"
+                    >
+                        Tas khusus untuk membawa
+                        perlengkapan memancing.
+                    </p>
+
+                    <button
+                        onclick="openImage(this)"
+                        data-image="image/gp.jpg"
+                        data-caption="Tas Mancing"
+                        class="mt-5 text-blue-600 font-bold text-sm"
+                    >
+                        Lihat gambar →
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 4 -->
+
+            <div
+                class="portfolio-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm reveal"
+            >
+
+                <div
+                    class="h-72 overflow-hidden bg-slate-200 relative"
+                >
+
+                    <img
+                        src="image/rt.jpg"
+                        alt="Baju buatan Muhamad Fazri"
+                        class="portfolio-image w-full h-full object-cover"
+                    >
+
+                    <div
+                        class="absolute top-4 left-4 px-3 py-1.5 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-teal-600"
+                    >
+                        PAKAIAN
+                    </div>
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3
+                        class="text-xl font-black"
+                    >
+                        Baju
+                    </h3>
+
+                    <p
+                        class="mt-3 text-slate-600 text-sm leading-6"
+                    >
+                        Pakaian dengan jahitan yang
+                        rapi dan sesuai kebutuhan.
+                    </p>
+
+                    <button
+                        onclick="openImage(this)"
+                        data-image="image/rt.jpg"
+                        data-caption="Baju"
+                        class="mt-5 text-teal-600 font-bold text-sm"
+                    >
+                        Lihat gambar →
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 5 -->
+
+            <div
+                class="portfolio-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm reveal"
+            >
+
+                <div
+                    class="h-72 overflow-hidden bg-slate-200 relative"
+                >
+
+                    <img
+                        src="image/rw.jpg"
+                        alt="Celana buatan Muhamad Fazri"
+                        class="portfolio-image w-full h-full object-cover"
+                    >
+
+                    <div
+                        class="absolute top-4 left-4 px-3 py-1.5 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-teal-600"
+                    >
+                        PAKAIAN
+                    </div>
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3
+                        class="text-xl font-black"
+                    >
+                        Celana
+                    </h3>
+
+                    <p
+                        class="mt-3 text-slate-600 text-sm leading-6"
+                    >
+                        Celana dengan jahitan rapi dan
+                        kuat untuk digunakan sehari-hari.
+                    </p>
+
+                    <button
+                        onclick="openImage(this)"
+                        data-image="image/rw.jpg"
+                        data-caption="Celana"
+                        class="mt-5 text-teal-600 font-bold text-sm"
+                    >
+                        Lihat gambar →
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 6 -->
+
+            <div
+                class="portfolio-card bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm reveal"
+            >
+
+                <div
+                    class="h-72 overflow-hidden bg-slate-200 relative"
+                >
+
+                    <img
+                        src="image/kt.jpg"
+                        alt="Tas alat musik buatan Muhamad Fazri"
+                        class="portfolio-image w-full h-full object-cover"
+                    >
+
+                    <div
+                        class="absolute top-4 left-4 px-3 py-1.5 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-blue-600"
+                    >
+                        TAS
+                    </div>
+
+                </div>
+
+                <div class="p-6">
+
+                    <h3
+                        class="text-xl font-black"
+                    >
+                        Tas Alat Musik
+                    </h3>
+
+                    <p
+                        class="mt-3 text-slate-600 text-sm leading-6"
+                    >
+                        Tas untuk membawa dan melindungi
+                        alat musik.
+                    </p>
+
+                    <button
+                        onclick="openImage(this)"
+                        data-image="image/kt.jpg"
+                        data-caption="Tas Alat Musik"
+                        class="mt-5 text-blue-600 font-bold text-sm"
+                    >
+                        Lihat gambar →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section
+    id="education"
+    class="py-24 bg-white"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8"
+    >
+
+        <div class="reveal">
+
+            <div class="section-line mb-5"></div>
+
+            <p
+                class="text-blue-600 font-bold mb-3"
+            >
+                Pendidikan
+            </p>
+
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-black"
+            >
+                Riwayat Pendidikan
+            </h2>
+
+        </div>
+
+        <div
+            class="max-w-3xl mt-14 relative ml-3"
+        >
+
+            <div
+                class="absolute left-3 top-0 bottom-0 w-[3px] timeline-line rounded-full"
+            ></div>
+
+            <!-- ITEM -->
+
+            <div
+                class="relative pl-12 pb-12 reveal"
+            >
+
+                <div
+                    class="absolute left-0 top-1 w-7 h-7 rounded-full bg-blue-600 border-4 border-white shadow-lg shadow-blue-600/30"
+                ></div>
+
+                <div
+                    class="bg-slate-50 border border-slate-100 rounded-3xl p-7"
+                >
+
+                    <span
+                        class="text-xs font-bold text-blue-600 uppercase tracking-wider"
+                    >
+                        Pendidikan
+                    </span>
+
+                    <h3
+                        class="text-xl sm:text-2xl font-black mt-2"
+                    >
+                        MTs BUNIJAYA
+                    </h3>
+
+                    <p
+                        class="text-slate-600 mt-3 leading-7"
+                    >
+                        Pendidikan tingkat madrasah
+                        tsanawiyah.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+
+            <div
+                class="relative pl-12 reveal"
+            >
+
+                <div
+                    class="absolute left-0 top-1 w-7 h-7 rounded-full bg-teal-600 border-4 border-white shadow-lg shadow-teal-600/30"
+                ></div>
+
+                <div
+                    class="bg-slate-50 border border-slate-100 rounded-3xl p-7"
+                >
+
+                    <span
+                        class="text-xs font-bold text-teal-600 uppercase tracking-wider"
+                    >
+                        Pendidikan
+                    </span>
+
+                    <h3
+                        class="text-xl sm:text-2xl font-black mt-2"
+                    >
+                        SMKN 1 RONGGA
+                    </h3>
+
+                    <p
+                        class="text-slate-600 mt-3 leading-7"
+                    >
+                        Pendidikan tingkat sekolah
+                        menengah kejuruan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section
+    id="experience"
+    class="py-24 bg-slate-50"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8"
+    >
+
+        <div class="reveal">
+
+            <div class="section-line mb-5"></div>
+
+            <p
+                class="text-blue-600 font-bold mb-3"
+            >
+                Pengalaman
+            </p>
+
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-black"
+            >
+                Pengalaman Kerja
+            </h2>
+
+        </div>
+
+        <div
+            class="grid md:grid-cols-3 gap-6 mt-14"
+        >
+
+            <!-- CARD -->
+
+            <div
+                class="bg-white rounded-3xl p-8 border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition duration-300 reveal"
+            >
+
+                <div
+                    class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl"
+                >
+                    🎒
+                </div>
+
+                <h3
+                    class="font-black text-xl mt-6"
+                >
+                    Membuat Tas di Rumah
+                </h3>
+
+                <p
+                    class="text-slate-600 mt-3 leading-7"
+                >
+                    Membuat tas sekolah dan tas
+                    bermain sesuai kebutuhan.
+                </p>
+
+            </div>
+
+            <div
+                class="bg-white rounded-3xl p-8 border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition duration-300 reveal"
+            >
+
+                <div
+                    class="w-16 h-16 rounded-2xl bg-teal-100 flex items-center justify-center text-3xl"
+                >
+                    👕
+                </div>
+
+                <h3
+                    class="font-black text-xl mt-6"
+                >
+                    Membuat Pakaian
+                </h3>
+
+                <p
+                    class="text-slate-600 mt-3 leading-7"
+                >
+                    Membuat celana dan kemeja
+                    dengan jahitan yang rapi.
+                </p>
+
+            </div>
+
+            <div
+                class="bg-white rounded-3xl p-8 border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition duration-300 reveal"
+            >
+
+                <div
+                    class="w-16 h-16 rounded-2xl bg-violet-100 flex items-center justify-center text-3xl"
+                >
+                    🧵
+                </div>
+
+                <h3
+                    class="font-black text-xl mt-6"
+                >
+                    Menjahit & Memperbaiki
+                </h3>
+
+                <p
+                    class="text-slate-600 mt-3 leading-7"
+                >
+                    Memperbaiki dan merapikan
+                    berbagai jenis tas dan pakaian.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    id="contact"
+    class="py-24 relative overflow-hidden bg-slate-950 text-white"
+>
+
+    <!-- background -->
+
+    <div
+        class="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full"
+    ></div>
+
+    <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-teal-600/20 blur-3xl rounded-full"
+    ></div>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8 relative z-10"
+    >
+
+        <div
+            class="grid lg:grid-cols-2 gap-14 items-center"
+        >
+
+            <!-- INFO -->
+
+            <div class="reveal">
+
+                <div
+                    class="section-line mb-5"
+                ></div>
+
+                <p
+                    class="text-blue-400 font-bold mb-3"
+                >
+                    Kontak
+                </p>
+
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-5xl font-black"
+                >
+                    Mari buat sesuatu
+                    <span class="text-blue-400">
+                        bersama.
+                    </span>
+                </h2>
+
+                <p
+                    class="mt-6 text-slate-400 leading-8 max-w-lg"
+                >
+                    Saya terbuka untuk menerima pesanan,
+                    diskusi model terbaru, dan kebutuhan
+                    jahit tas maupun pakaian.
+                </p>
+
+                <div
+                    class="mt-9 space-y-4"
+                >
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:husaenial@gmail.com"
+                        class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center text-xl"
+                        >
+                            ✉️
+                        </div>
+
+                        <div>
+
+                            <p
+                                class="text-xs text-slate-500"
+                            >
+                                Email
+                            </p>
+
+                            <p
+                                class="font-semibold"
+                            >
+                                husaenial@gmail.com
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                    <!-- LOCATION -->
+
+                    <div
+                        class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-teal-600/20 flex items-center justify-center text-xl"
+                        >
+                            📍
+                        </div>
+
+                        <div>
+
+                            <p
+                                class="text-xs text-slate-500"
+                            >
+                                Lokasi
+                            </p>
+
+                            <p
+                                class="font-semibold"
+                            >
+                                Terminal Bunijaya
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        href="https://wa.me/6281234567890"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-green-500/10 transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-xl"
+                        >
+                            📱
+                        </div>
+
+                        <div>
+
+                            <p
+                                class="text-xs text-slate-500"
+                            >
+                                WhatsApp
+                            </p>
+
+                            <p
+                                class="font-semibold"
+                            >
+                                Chat melalui WhatsApp
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+
+            <div
+                class="bg-white text-slate-800 p-7 sm:p-9 rounded-3xl shadow-2xl reveal"
+            >
+
+                <div class="mb-7">
+
+                    <span
+                        class="text-xs font-bold text-blue-600 uppercase tracking-wider"
+                    >
+                        Pesan
+                    </span>
+
+                    <h3
+                        class="text-2xl font-black mt-2"
+                    >
+                        Kirim Pesan
+                    </h3>
+
+                    <p
+                        class="text-sm text-slate-500 mt-2"
+                    >
+                        Pesan akan diarahkan langsung
+                        ke WhatsApp.
+                    </p>
+
+                </div>
+
+                <form id="contactForm">
+
+                    <div class="mb-5">
+
+                        <label
+                            for="name"
+                            class="block text-sm font-bold mb-2"
+                        >
+                            Nama
+                        </label>
+
+                        <input
+                            id="name"
+                            type="text"
+                            required
+                            placeholder="Nama Anda"
+                            class="w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                        >
+
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label
+                            for="email"
+                            class="block text-sm font-bold mb-2"
+                        >
+                            Email
+                        </label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            required
+                            placeholder="email@example.com"
+                            class="w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                        >
+
+                    </div>
+
+                    <div class="mb-6">
+
+                        <label
+                            for="message"
+                            class="block text-sm font-bold mb-2"
+                        >
+                            Pesan
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="5"
+                            required
+                            placeholder="Contoh: Saya ingin membuat tas..."
+                            class="w-full px-4 py-3.5 border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none"
+                        ></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full py-4 btn-primary text-white rounded-xl font-bold"
+                    >
+                        Kirim ke WhatsApp →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer
+    class="bg-black text-slate-500"
+>
+
+    <div
+        class="max-w-7xl mx-auto px-5 lg:px-8 py-10"
+    >
+
+        <div
+            class="flex flex-col md:flex-row justify-between gap-7"
+        >
+
+            <div>
+
+                <div
+                    class="flex items-center gap-3"
+                >
+
+                    <div
+                        class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-black"
+                    >
+                        MF
+                    </div>
+
+                    <div>
+
+                        <h3
+                            class="text-white font-black"
+                        >
+                            Muhamad Fazri Al Husaeni
+                        </h3>
+
+                        <p class="text-sm mt-1">
+                            Tukang Jahit Tas & Pakaian
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div
+                class="flex flex-wrap gap-5 text-sm font-semibold"
+            >
+
+                <a
+                    href="#home"
+                    class="hover:text-white transition"
+                >
+                    Beranda
+                </a>
+
+                <a
+                    href="#about"
+                    class="hover:text-white transition"
+                >
+                    Tentang
+                </a>
+
+                <a
+                    href="#portfolio"
+                    class="hover:text-white transition"
+                >
+                    Portfolio
+                </a>
+
+                <a
+                    href="#contact"
+                    class="hover:text-white transition"
+                >
+                    Kontak
+                </a>
+
+            </div>
+
+        </div>
+
+        <div
+            class="border-t border-white/10 mt-8 pt-8 text-sm text-center"
+        >
+
+            ©
+            <span id="year"></span>
+            Muhamad Fazri Al Husaeni.
+            Semua hak dilindungi.
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    id="backToTop"
+    class="hidden fixed bottom-6 right-6 w-12 h-12 bg-blue-600 text-white rounded-full shadow-xl hover:bg-blue-700 hover:-translate-y-1 transition z-40"
+    aria-label="Kembali ke atas"
+>
+    ↑
+</button>
+
+<!-- =========================================================
+     IMAGE MODAL
+========================================================= -->
+
+<div
+    id="imageModal"
+    class="hidden fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm items-center justify-center p-5"
+>
+
+    <button
+        id="closeModal"
+        class="absolute top-5 right-6 w-12 h-12 rounded-full bg-white/10 text-white text-3xl hover:bg-red-500 transition"
+        aria-label="Tutup gambar"
+    >
+        &times;
+    </button>
+
+    <div
+        class="max-w-5xl w-full flex flex-col items-center"
+    >
+
+        <img
+            id="modalImage"
+            src=""
+            alt=""
+            class="modal-image max-w-full max-h-[78vh] object-contain rounded-2xl shadow-2xl"
+        >
+
+        <p
+            id="modalCaption"
+            class="text-white text-center mt-5 font-bold text-lg"
+        ></p>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            mobileMenu.classList.toggle("hidden");
+
+            if (
+                mobileMenu.classList.contains("hidden")
+            ) {
+
+                menuButton.textContent = "☰";
+
+            } else {
+
+                menuButton.textContent = "✕";
+
+            }
+
+        }
+    );
+
+    document
+        .querySelectorAll(".mobile-link")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mobileMenu.classList.add("hidden");
+
+                    menuButton.textContent = "☰";
+
+                }
+            );
+
+        });
+
+    /* ==========================================
+       YEAR
+    ========================================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    /* ==========================================
+       NAVBAR SCROLL
+    ========================================== */
+
+    const navbar =
+        document.getElementById("navbar");
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (window.scrollY > 50) {
+
+                navbar.classList.add(
+                    "bg-white/90",
+                    "backdrop-blur-xl",
+                    "shadow-sm",
+                    "border-b",
+                    "border-slate-200"
+                );
+
+            } else {
+
+                navbar.classList.remove(
+                    "bg-white/90",
+                    "backdrop-blur-xl",
+                    "shadow-sm",
+                    "border-b",
+                    "border-slate-200"
+                );
+
+            }
+
+        }
+    );
+
+    /* ==========================================
+       BACK TO TOP
+    ========================================== */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (window.scrollY > 500) {
+
+                backToTop.classList.remove("hidden");
+
+            } else {
+
+                backToTop.classList.add("hidden");
+
+            }
+
+        }
+    );
+
+    backToTop.addEventListener(
+        "click",
+        function () {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+    /* ==========================================
+       IMAGE MODAL
+    ========================================== */
+
+    const imageModal =
+        document.getElementById("imageModal");
+
+    const modalImage =
+        document.getElementById("modalImage");
+
+    const modalCaption =
+        document.getElementById("modalCaption");
+
+    const closeModal =
+        document.getElementById("closeModal");
+
+    function openImage(button) {
+
+        const image =
+            button.getAttribute("data-image");
+
+        const caption =
+            button.getAttribute("data-caption");
+
+        modalImage.src = image;
+
+        modalImage.alt = caption;
+
+        modalCaption.textContent = caption;
+
+        imageModal.classList.remove("hidden");
+
+        imageModal.classList.add("flex");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+    /* Klik langsung gambar */
+
+    document
+        .querySelectorAll(".portfolio-image")
+        .forEach(function (image) {
+
+            image.addEventListener(
+                "click",
+                function () {
+
+                    modalImage.src = this.src;
+
+                    modalImage.alt = this.alt;
+
+                    modalCaption.textContent =
+                        this.alt;
+
+                    imageModal.classList.remove(
+                        "hidden"
+                    );
+
+                    imageModal.classList.add(
+                        "flex"
+                    );
+
+                    document.body.style.overflow =
+                        "hidden";
+
+                }
+            );
+
+        });
+
+    function closeImageModal() {
+
+        imageModal.classList.add("hidden");
+
+        imageModal.classList.remove("flex");
+
+        modalImage.src = "";
+
+        document.body.style.overflow = "";
+
+    }
+
+    closeModal.addEventListener(
+        "click",
+        closeImageModal
+    );
+
+    imageModal.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === imageModal
+            ) {
+
+                closeImageModal();
+
+            }
+
+        }
+    );
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                closeImageModal();
+
+            }
+
+        }
+    );
+
+    /* ==========================================
+       CONTACT FORM -> WHATSAPP
+    ========================================== */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const name =
+                document
+                    .getElementById("name")
+                    .value
+                    .trim();
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+            if (
+                !name ||
+                !email ||
+                !message
+            ) {
+
+                alert(
+                    "Mohon lengkapi semua data."
+                );
+
+                return;
+
+            }
+
+            /*
+                GANTI DENGAN NOMOR WHATSAPP ASLI
+
+                Format:
+                628xxxxxxxxxx
+
+                Contoh:
+                6281234567890
+            */
+
+            const phoneNumber =
+                "6281234567890";
+
+            const text =
+                "Halo Muhamad Fazri,%0A%0A" +
+
+                "Nama: " +
+                encodeURIComponent(name) +
+
+                "%0AEmail: " +
+                encodeURIComponent(email) +
+
+                "%0A%0APesan:%0A" +
+
+                encodeURIComponent(message);
+
+            const whatsappURL =
+                "https://wa.me/" +
+                phoneNumber +
+                "?text=" +
+                text;
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+    );
+
+    /* ==========================================
+       SCROLL REVEAL
+    ========================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+    revealElements.forEach(
+        function (element) {
+
+            revealObserver.observe(element);
+
+        }
+    );
+
+    /* ==========================================
+       ACTIVE NAVIGATION
+    ========================================== */
+
+    const sections =
+        document.querySelectorAll(
+            "section[id]"
+        );
+
+    const navLinks =
+        document.querySelectorAll(
+            ".nav-link"
+        );
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            let current = "";
+
+            sections.forEach(
+                function (section) {
+
+                    const sectionTop =
+                        section.offsetTop - 150;
+
+                    if (
+                        window.scrollY >= sectionTop
+                    ) {
+
+                        current =
+                            section.getAttribute(
+                                "id"
+                            );
+
+                    }
+
+                }
+            );
+
+            navLinks.forEach(
+                function (link) {
+
+                    link.classList.remove(
+                        "active"
+                    );
+
+                    if (
+                        link.getAttribute(
+                            "href"
+                        ) === "#" + current
+                    ) {
+
+                        link.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+<!-- =========================================================
+     EXTRA STYLE FOR SKILL PILLS
+========================================================= -->
+
+<style>
+
+    .skill-pill {
+        padding: 9px 15px;
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #475569;
+        box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+        transition: all 0.3s ease;
+    }
+
+    .skill-pill:hover {
+        transform: translateY(-3px);
+        border-color: #93c5fd;
+        color: #2563eb;
+        box-shadow: 0 8px 20px rgba(37,99,235,0.10);
+    }
+
+</style>
+
+</body>
+</html>
+```

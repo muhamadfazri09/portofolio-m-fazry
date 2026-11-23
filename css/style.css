@@ -1,0 +1,126 @@
+/* css eksternal */
+/* p {     font-size: 50px; } */
+html {
+  scroll-behavior: smooth;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kotakHitam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+}
+
+.kotakMerah {
+  width: 30px;
+  height: 50px;
+  background-color: blue;
+}
+
+.kotakKuning {
+  width: 50px;
+  height: 80px;
+  background-color: yellow;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+#kotakHitam {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}
+
+#kotakMerah {
+  width: 70px;
+  height: 100px;
+  /* flex-grow: 2; */
+  background-color: red;
+}
+
+#kotakKuning {
+  width: 70px;
+  height: 100px;
+  /* flex-grow: 1; */
+  background-color: yellow;
+}
+
+#kotakBiru {
+  width: 70px;
+  height: 100px;
+  /* flex-grow: 1; */
+  background-color: blue;
+}
+
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: azure;
+}
+
+.layanan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* mobile-first */
+@media (min-width:768px) {
+  .nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+  }
+
+  .layanan-container {
+    display: flex;
+    flex-direction: row;
+  }
+}

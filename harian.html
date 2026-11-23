@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Create Account</h1>
+    </div>
+
+    <form id="accountForm">
+
+        <div class="form-content">
+
+            <div class="row">
+                <div class="field">
+                    <label for="firstName">First name *</label>
+                    <input type="text" id="firstName"
+                        placeholder="enter your first name" required>
+                </div>
+
+                <div class="field">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName"
+                        placeholder="enter your last name">
+                </div>
+            </div>
+
+            <div class="field full">
+                <label for="email">Email*</label>
+                <input type="email" id="email"
+                    placeholder="enter your email" required>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password"
+                        placeholder="enter your password" required>
+                </div>
+
+                <div class="field">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword"
+                        placeholder="enter your password again" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label>Gender:</label>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Hobbies</label>
+                    <div class="options">
+                        <label>
+                            <input type="checkbox" name="hobbies" value="Music">
+                            Music
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="hobbies" value="Sports">
+                            Sports
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="hobbies" value="Travel">
+                            Travel
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="hobbies" value="Movies">
+                            Movies
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="source">Source of Income</label>
+                    <select id="source">
+                        <option>Employed</option>
+                        <option>Self-employed</option>
+                        <option>Unemployed</option>
+                        <option>Student</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="income">Income</label>
+                    <div class="income-box">
+                        <input type="range" id="income"
+                            min="0" max="100" value="20">
+                        <span id="incomeValue">20K</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="photo">Upload Profile Picture</label>
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+
+                <div class="field">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" value="18" min="1">
+                </div>
+            </div>
+
+            <div class="field full">
+                <label for="bio">Bio</label>
+                <textarea id="bio"></textarea>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <button type="submit">Create</button>
+        </div>
+
+    </form>
+</div>
+
+<script>
+    const income = document.getElementById("income");
+    const incomeValue = document.getElementById("incomeValue");
+
+    income.addEventListener("input", function () {
+        incomeValue.textContent = this.value + "K";
+    });
+
+    document.getElementById("accountForm").addEventListener(
+        "submit", function (event) {        
+            event.preventDefault();
+
+            const password =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Password tidak sama!");
+                return;
+            }
+
+            alert("Create Account berhasil!");
+        }
+    );
+</script>
+
+</body>
+</html>
